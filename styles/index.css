@@ -1,4 +1,4 @@
-/* From uiverse.io */
+/* BACK BUTTON */
 button.back {
     position: relative;
     border: none;
@@ -88,22 +88,134 @@ button:active .shadow {
 button:focus:not(:focus-visible){
     outline: none;
 }
-body {
-    background: linear-gradient(to right, #c93917, #af1d1d);
 
+/* PLAY BUTTON*/
+button.play {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: "Arial Black", sans-serif;
 }
 
-button.back .icon.arrow {
+.shadow1 {
     position: absolute;
-    content: "";
-    top: 0.35rem;
-    right: 1.2rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid #fff;
-    border-right: 0.125rem solid #fff;
-    transform: rotate(225deg);
+    top: 400px;
+    left: 480px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
 }
 
+.edge1 {
+    position: absolute;
+    top: 400px;
+    left: 480px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+            to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%
+    );
+}
 
+.front1 {
+    display: block;
+    position: relative;
+    top: 400px;
+    left: 480px;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
 
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front1 {
+    transform: translateY(-6px);
+    transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front1 {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow1 {
+    transform: translateY(4px);
+    transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow1 {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible){
+    outline: none;
+}
+/* FORMULARIO LOGIN */
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 500px;
+    height: 180px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+    padding-top: 50px;
+}
+
+/* TEXTBOX NOMBRE*/
+.nombre{
+    margin-top:0;
+    margin-left: 250px;
+}
+
+/*TITULO USERNAME*/
+.username{
+    margin-left: 250px;
+    margin-top: 0;
+    font-family: "Arial Black", sans-serif;
+}
+/*BALANCE*/
+.balance{
+    margin-left: 250px;
+    margin-top: 30px;
+    font-family: "Arial Black", sans-serif;
+}
+/* BACKGROUND*/
+body {
+    background-color: #726d6d;
+
+}
