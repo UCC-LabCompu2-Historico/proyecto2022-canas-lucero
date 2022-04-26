@@ -9,6 +9,7 @@
     <link href="styles/selectgame.css" rel="stylesheet" type="text/css">
     <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
+    <script src="scripts/selectgame.js"></script>
     <title>Select Gamemode</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     </div>
     <div id="Slots">
         <h1 id="SlotsTitle" class="titles">SLOTS</h1>
-        <img id="SlotsImg" src="resources/Slot-Machine.jpg" alt>
+        <img draggable="false" id="SlotsImg" src="resources/Slot-Machine.jpg" alt>
         <button id="Btn1" class="PlayButton">
             <span class="shadow"></span>
             <span class="edge"></span>
@@ -28,7 +29,7 @@
     </div>
     <div id="Ruleta">
         <h1 id="RuletaTitle" class="titles">RULETA</h1>
-        <img id="RuletaImg" src="resources/ruleta.jpg" alt>
+        <img draggable="false" id="RuletaImg" src="resources/ruleta.jpg" alt>
         <button id="Btn2" class="PlayButton">
             <span class="shadow"></span>
             <span class="edge"></span>
@@ -42,7 +43,7 @@
         <span class="front text"> CHECK OUT!
   </span>
     </button>
-    <button id="BackBtn" class="PlayButton">
+    <button id="BackBtn" class="PlayButton" onclick="Back()">
         <span class="shadow"></span>
         <span class="edge"></span>
         <span class="front text"> <i class="gg-arrow-left"></i>

@@ -1,3 +1,3 @@
 function Back() {
-    location.href = 'profile.html';
+    location.href = 'index.html';
 }

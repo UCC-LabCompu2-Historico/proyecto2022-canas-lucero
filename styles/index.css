@@ -1,4 +1,8 @@
-*{margin: 0 auto; padding: 0}
+* {
+    margin: 0 auto;
+    padding: 0;
+    user-select: none;
+}
 
 /* Botón PLAY */
 button {
@@ -123,6 +127,17 @@ footer {
     z-index: 2;
 }
 
+#Cruz {
+    transform: rotate(45deg);
+    font-weight: bolder;
+}
+
+.Cerrar{
+    float: right;
+    top: -10px;
+    left: 35px;
+}
+
 /* Text ¿Como jugar? Button */
 
 #PlayButton3 {
@@ -132,7 +147,6 @@ footer {
 #front2 {
     font-size: 12px;
     font-weight: bolder;
-
 }
 
 
@@ -142,7 +156,6 @@ body {
     overflow: hidden;
     position: absolute;
     padding-bottom: 0;
-    /*background: rgb(96, 95, 95) repeat;*/
     background-size: cover;
     height: auto;
 }
@@ -162,7 +175,7 @@ body .ImgBg {
     position: relative;
     display: block;
     width: 10px;
-    height: 12px;
+    height: 13px;
     border: 2px solid;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px
@@ -194,21 +207,44 @@ body .ImgBg {
     top: 0
 }
 
-/* LeaderBoard floating Div */
+/* Floating Divs */
 
-.test {
+#LeaderBoard {
     position: absolute;
-    background: black;
-    width: 100px;
-    height: 100px;
-    display: flex;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 65vw;
+    height: 65vh;
+    background: white;
+    z-index: 2;
+    border-radius: 2%;
+    box-shadow: 0 0 10px black;
+    display: none;
+}
+
+#ComoJugar {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 45vw;
+    height: 45vh;
+    background: white;
+    z-index: 2;
+    border-radius: 2%;
+    box-shadow: 0 0 10px black;
+    display: none;
 }
 
 /* HEADER STYLE */
 
 header {
     position: absolute;
+    color: white;
     font-family: "Arial Black", sans-serif;
     font-size: 7.5px;
-    top: -258px;
+    z-index: 2;
+    top: 1%;
+    left: 0.5%;
 }

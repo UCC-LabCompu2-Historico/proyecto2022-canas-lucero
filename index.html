@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet" type="text/css">
     <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <script src="scripts/index.js" async></script>
+    <link href='https://css.gg/math-plus.css' rel='stylesheet'>
+    <script src="scripts/index.js"></script>
     <title>Lotus CASINO</title>
 </head>
 <body>
@@ -30,16 +31,31 @@
             </button>
 
         </div>
-        <div class="test"></div>
+        <div id="LeaderBoard">
+            <button id="CerrarLB" class="Cerrar" onclick="CerrarLeaderBoard()">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"><i id="Cruz" class="gg-math-plus"></i>
+  </span>
+            </button>
+        </div>
+        <div id="ComoJugar">
+            <button id="CerrarCJ" class="Cerrar" onclick="CerrarComoJugar()">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"><i id="Cruz" class="gg-math-plus"></i>
+  </span>
+            </button>
+        </div>
     </main>
     <footer>
-        <button id="HowToPlay" class="PlayButton" onclick="">
+        <button id="HowToPlay" class="PlayButton" onclick="ComoJugar()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span id="front2" class="front text">¿COMO JUGAR?
   </span>
         </button>
-        <button id="LeaderBoard" class="PlayButton">
+        <button id="LeaderBoardBtn" class="PlayButton" onclick="LeaderBoard()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front text">
@@ -48,6 +64,5 @@
         </button>
     </footer>
 </div>
-<script src="scripts/index.js"></script>
 </body>
 </html>
