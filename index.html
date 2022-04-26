@@ -4,43 +4,50 @@
     <meta charset="UTF-8">
     <meta content="Maximo Lucero Ruiz - Felipe Cañas" name="Author">
     <meta content="html, index" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet" type="text/css">
     <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
+    <script src="scripts/index.js" async></script>
     <title>Lotus CASINO</title>
 </head>
-
 <body>
-<main>
+<img class="ImgBg" src="resources/indexbg.jpg" alt>
+<div class="container">
+    <header>
+        <h1><i>CASINO DIGITAL ®</i></h1>
+    </header>
+    <main>
+        <nav class="Lotus-Casino">
+            LOTUS CASINO
+        </nav>
+        <div id="PlayButtonDiv">
+            <button id="PlayButton" class="PlayButton" onclick="PlayReDirect()">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text">PLAY
+  </span>
+            </button>
 
-    <nav class="Lotus-Casino">
-        LOTUS CASINO
-    </nav>
-    <div id="PlayButtonDiv">
-        <button id="PlayButton" class="PlayButton">
+        </div>
+        <div class="test"></div>
+    </main>
+    <footer>
+        <button id="HowToPlay" class="PlayButton" onclick="">
             <span class="shadow"></span>
             <span class="edge"></span>
-            <span class="front text">PLAY
+            <span id="front2" class="front text">¿COMO JUGAR?
   </span>
         </button>
-    </div>
-    <div class="test"></div>
-</main>
-<footer>
-    <button id="PlayButton3" class="PlayButton">
-        <span class="shadow"></span>
-        <span class="edge"></span>
-        <span id="front2" class="front text">¿Como jugar?
-  </span>
-    </button>
-    <button id="PlayButton" class="PlayButton">
-        <span class="shadow"></span>
-        <span class="edge"></span>
-        <span class="front text">
+        <button id="LeaderBoard" class="PlayButton">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front text">
         <i class="gg-trophy"></i>
   </span>
-    </button>
-</footer>
+        </button>
+    </footer>
+</div>
+<script src="scripts/index.js"></script>
 </body>
 </html>

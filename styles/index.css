@@ -1,3 +1,5 @@
+*{margin: 0 auto; padding: 0}
+
 /* Botón PLAY */
 button {
     position: relative;
@@ -97,7 +99,7 @@ main .Lotus-Casino {
     margin: 250px 200px 20px 200px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-shadow: 15px 3px 5px black;
-    font-size: 200px;
+    font-size: 300px;
     font-weight: bolder;
     color: #55aee5;
 }
@@ -114,12 +116,22 @@ footer {
     margin-top: 150px;
 }
 
-#PlayButton3{
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Text ¿Como jugar? Button */
+
+#PlayButton3 {
     font-family: "Arial", sans-serif;
 }
 
-#front2{
-    font-size: 10px;
+#front2 {
+    font-size: 12px;
+    font-weight: bolder;
 
 }
 
@@ -127,13 +139,21 @@ footer {
 /*Background*/
 
 body {
-    position: relative;
+    overflow: hidden;
+    position: absolute;
     padding-bottom: 0;
-    background: rgb(96, 95, 95);
-    background-repeat: repeat;
+    /*background: rgb(96, 95, 95) repeat;*/
     background-size: cover;
     height: auto;
 }
+
+body .ImgBg {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
 
 /*Trophy Icon*/
 
@@ -141,7 +161,6 @@ body {
     box-sizing: border-box;
     position: relative;
     display: block;
-    transform: scale(var(--ggs,1));
     width: 10px;
     height: 12px;
     border: 2px solid;
@@ -149,7 +168,7 @@ body {
     border-bottom-right-radius: 100px
 }
 
-.gg-trophy::after,.gg-trophy::before {
+.gg-trophy::after, .gg-trophy::before {
     content: "";
     display: block;
     box-sizing: border-box;
@@ -157,7 +176,7 @@ body {
 }
 
 .gg-trophy::before {
-    box-shadow: inset 0 0 0 2px,0 2px 0 0;
+    box-shadow: inset 0 0 0 2px, 0 2px 0 0;
     bottom: -4px;
     width: 6px;
     height: 4px;
@@ -175,11 +194,21 @@ body {
     top: 0
 }
 
+/* LeaderBoard floating Div */
 
-.test{
+.test {
+    position: absolute;
     background: black;
     width: 100px;
     height: 100px;
-    position: absolute;
     display: flex;
+}
+
+/* HEADER STYLE */
+
+header {
+    position: absolute;
+    font-family: "Arial Black", sans-serif;
+    font-size: 7.5px;
+    top: -258px;
 }
