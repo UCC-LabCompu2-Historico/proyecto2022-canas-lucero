@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Maximo Lucero Ruiz - Felipe Cañas" name="Author">
+    <meta content="html, index" name="keywords">
+    <title>Profile Page</title>
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <link href="styles/profile.css" rel="stylesheet" type="text/css">
+    <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
+    <script src="scripts/profile.js"></script>
+</head>
+<body>
+<main>
+    <button class="back" onclick="Back()">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text">
+            <i class="gg-arrow-left"></i>
+        </span>
+    </button>
+
+    <div id="conjunto">
+        <button class="play" onclick="Continue()">
+            <span class="shadow1"></span>
+            <span class="edge1"></span>
+            <span class="front1 text">CONTINUAR
+        </span>
+        </button>
+
+
+        <div class="card">
+            <img class="profile" src="resources/Profile.png" alt draggable="false">
+            <div id="info">
+                <label for="inputname" id="name" class="info">Nombre de Usuario</label>
+                <input type="text" id="inputname" class="info" autofocus>
+                <h3 id="balance" class="info">Balance</h3>
+                <h3 id="bal" class="info">$1000⁰⁰</h3>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+</html>

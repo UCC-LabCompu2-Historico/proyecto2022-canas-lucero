@@ -1,5 +1,6 @@
 function PlayReDirect() {
-    location.href = 'selectgame.html';
+    location.href = 'profile.html';
+
 }
 
 function LeaderBoard() {

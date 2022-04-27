@@ -1,3 +1,15 @@
 function Back() {
-    location.href = 'index.html';
+    location.href = 'profile.html';
+}
+
+function PlayRuleta(){
+    location.href='ruleta.html';
+}
+
+function PlaySlots(){
+    location.href='';
+}
+
+function CheckOut(){
+
 }
