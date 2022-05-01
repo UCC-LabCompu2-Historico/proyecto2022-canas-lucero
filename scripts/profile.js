@@ -1,13 +1,14 @@
-function Back(){
-    location.href='index.html';
+function ProfileBack() {
+    location.href = 'index.html';
 }
 
-function Continue(){
+function Continue() {
     let NameInput = document.getElementById("inputname")
-    if(NameInput.value === ''){
+    if (NameInput.value === '') {
         alert('Amig@ te olvidaste de escribir el nombre 👀')
+    } else {
+        sessionStorage.setItem("username", document.getElementById("inputname").value);
+        location.href = 'selectgame.html';
     }
-    else{
-        location.href='selectgame.html';
-    }
+
 }

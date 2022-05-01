@@ -127,12 +127,17 @@ footer {
     z-index: 2;
 }
 
-#Cruz {
+#Cruz1 {
     transform: rotate(45deg);
     font-weight: bolder;
 }
 
-.Cerrar{
+#Cruz2 {
+    transform: rotate(45deg);
+    font-weight: bolder;
+}
+
+.Cerrar {
     float: right;
     top: -10px;
     left: 35px;

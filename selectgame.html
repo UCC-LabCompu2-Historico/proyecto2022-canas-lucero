@@ -10,17 +10,27 @@
     <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
     <script src="scripts/selectgame.js"></script>
+    <script src="scripts/profile.js"></script>
     <title>Select Gamemode</title>
 </head>
-<body>
+<body onload="UsernameLoading()">
 <div id="Contenedor">
     <div id="ProfilePlaceHolder">
-        <h1>PROFILE CARD PLACE HOLDER</h1>
+        <div class="card">
+            <img class="profile" src="resources/profile.png" alt draggable="false">
+            <div id="info">
+                <label id="name" class="info">Nombre de Usuario</label>
+                <h3 id="inputname"></h3>
+                <h3 id="balance" class="info">Balance</h3>
+                <h3 id="bal" class="info">$1000⁰⁰</h3>
+            </div>
+
+        </div>
     </div>
     <div id="Slots">
         <h1 id="SlotsTitle" class="titles">SLOTS</h1>
-        <img draggable="false" id="SlotsImg" src="resources/Slot-Machine.jpg" alt>
-        <button id="Btn1" class="PlayButton">
+        <img draggable="false" id="SlotsImg" src="resources/slot-Machine.jpg" alt>
+        <button id="Btn1" class="PlayButton" onclick="PlaySlots()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front text"> PLAY
@@ -37,13 +47,13 @@
   </span>
         </button>
     </div>
-    <button id="ChckOutBtn" class="PlayButton">
+    <button id="ChckOutBtn" class="PlayButton" onclick="CheckOut()">
         <span class="shadow"></span>
         <span class="edge"></span>
         <span class="front text"> CHECK OUT!
   </span>
     </button>
-    <button id="BackBtn" class="PlayButton" onclick="Back()">
+    <button id="BackBtn" class="PlayButton" onclick="SelectGameBack()">
         <span class="shadow"></span>
         <span class="edge"></span>
         <span class="front text"> <i class="gg-arrow-left"></i>
