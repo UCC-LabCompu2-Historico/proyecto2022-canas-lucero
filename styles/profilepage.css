@@ -1,8 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
     user-select: none;
 }
+
 /* BACK BUTTON */
 button.back {
     position: relative;
@@ -90,7 +91,7 @@ button:focus:not(:focus-visible) {
 
 /* PLAY BUTTON*/
 button.play {
-    position: relative;
+    position: absolute;
     border: none;
     background: transparent;
     padding: 0;
@@ -100,12 +101,16 @@ button.play {
     user-select: none;
     touch-action: manipulation;
     font-family: "Arial Black", sans-serif;
+    z-index: 6;
+    left:50%;
+    top:120%;
+    transform: translate(-50%, -50%);
 }
 
 .shadow1 {
     position: absolute;
-    top: 400px;
-    left: 480px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -117,8 +122,8 @@ button.play {
 
 .edge1 {
     position: absolute;
-    top: 400px;
-    left: 480px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -134,8 +139,8 @@ button.play {
 .front1 {
     display: block;
     position: relative;
-    top: 400px;
-    left: 480px;
+    top: 0;
+    left: 0;
     padding: 12px 27px;
     border-radius: 12px;
     font-size: 1.1rem;
@@ -174,55 +179,123 @@ button:focus:not(:focus-visible) {
     outline: none;
 }
 
+/* DIV LOGIN/PLAYBUTTON*/
+#conjunto{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+}
+
 /* FORMULARIO LOGIN */
 .card {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    width: 500px;
-    height: 180px;
-    border-radius: 30px;
+    margin-top: 10vh;
+    width: 45vw;
+    aspect-ratio: 1.618/1;
+    border-radius: 50px;
     background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-    -15px -15px 30px rgb(60, 60, 60);
-    padding-top: 30px;
+    box-shadow: 1vw 1vw 8vw rgb(25, 25, 25),
+    -1vw -1vw 8vw rgb(60, 60, 60);
+}
+/* INFO TARJETA*/
+#info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+    height: 98%;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
-/* TEXTBOX NOMBRE*/
-.nombre {
-    margin-top: 0;
-    margin-left: 250px;
+/**/
+.info{
+    margin-left: 17%;
+
 }
 
-/*TITULO USERNAME*/
-.username {
-    margin-left: 250px;
-    margin-top: 0;
-    font-family: "Arial Black", sans-serif;
+/*USERNAME*/
+#name {
+    position: relative;
+    top: 25%;
+    font-family: inherit;
     color: white;
+    font-size: inherit;
+    text-shadow: 2px 2px 1px black;
+
+}
+
+#inputname {
+    position: relative;
+    top: 30%;
+    width: 70%;
+    background: #3b3838;
+    color: #f1efef;
+    font-family: inherit;
+    text-shadow: 2px 2px 1px black;
+    font-size: 0.9em;
+    box-shadow: -2px -2px 1px black;
+    outline: none;
+}
+
+#inputname:focus{
+    transition-duration: 0.3s;
+    transition-property: background-color  ;
+    background: #4f4b4b;
 }
 
 /*BALANCE*/
-.balance {
-    margin-left: 250px;
-    margin-top: 40px;
-    font-family: "Arial Black", sans-serif;
+#balance {
+    position: relative;
+    top: 40% ;
+    font-family: inherit;
     color: white;
+    font-size: inherit;
+    text-shadow: 2px 2px 1px black;
 }
 
-.profile{
+#bal {
+    position: relative;
+    top: 45% ;
+    font-family: inherit;
+    color: #f1efef;
+    background: #3b3838;
+    width: fit-content;
+    font-size: 0.9em;
+    border-radius: 1px;
+    text-shadow: 2px 2px 1px black;
+    box-shadow: -2px -2px 1px black,
+    2px 2px 1px #939393;
+
+    font-weight: lighter;
+
+}
+
+/* IMAGEN PROFILE*/
+.profile {
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    margin-left: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 60%;
+    aspect-ratio: 1/1;
+    position: relative;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 25%;
+    box-shadow: 0 0 10px black;
+    border-style: solid;
+    border-color: grey;
+    border-width: thick;
+
 }
 
 /* BACKGROUND*/
 body {
     background-image: url("https://www.desktopbackground.org/download/960x544/2012/08/30/445003_dark-green-backgrounds-wallpapers-cave_1024x768_h.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }

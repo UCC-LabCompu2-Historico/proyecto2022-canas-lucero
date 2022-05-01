@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+/*BACKGROUND*/
+body {
+    background-image: url("https://www.desktopbackground.org/download/960x544/2012/08/30/445003_dark-green-backgrounds-wallpapers-cave_1024x768_h.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+/*BACKBUTTON*/
+#BackBtn {
+    position: relative;
+    top: 1vh;
+    left: 0.5vw;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+            to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%
+    );
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/*CONTENEDOR*/
+
+#contenedor{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    width: 70vw;
+}
+/*DISPLAY*/
+#display{
+    position: relative;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    aspect-ratio: 9/1;
+    left: 50%;
+    top: 50px;
+    background: #343232;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+
+}
+
+#placeholder{
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    position: relative;
+    font-family: "Arial Black", sans-serif;
+    color: white;
+}
+
+/*CANVAS*/
+
+#slots {
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+    border: transparent;
+    left: 50%;
+    top: 250px;
+    background-image:url("../resources/slots.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    transform: translate(-50%,-50%);
+}
+
+/*DIV BOTONERA*/
+#spinbutton{
+    position: absolute;
+    width: 40vw;
+    aspect-ratio: 3.5/1;
+    top: 500px;
+    left: 50%;
+    background: #343232;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+}
+/*DIV APUESTA*/
+#apuesta{
+    position: relative;
+    width: 30%;
+    aspect-ratio: 2/1;
+    background: #212121;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+#cantapuesta {
+    position:absolute;
+    transform: translate(-50%,-50%);
+    top: 20%;
+    left: 50%;
+    font-family: inherit;
+    color: white;
+    font-size: inherit;
+    text-shadow: 2px 2px 1px black;
+
+
+}
+
+#inputapuesta {
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    height: 30%;
+    width: 70%;
+    background: #3b3838;
+    color: #f1efef;
+    font-family: inherit;
+    text-shadow: 2px 2px 1px black;
+    font-size: 0.9em;
+    box-shadow: -2px -2px 1px black;
+    outline: none;
+}
+
+#inputapuesta:focus{
+    transition-duration: 0.3s;
+    transition-property: background-color  ;
+    background: #4f4b4b;
+}
+
+/*SPIN BUTTON*/
+.button {
+    color: #ecf0f1;
+    font-size: 100%;
+    background-color: #212121;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 3%;
+    box-shadow: 0 6px 0 #787878;
+    transition: all 50ms;
+    width: 35%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 70%;
+    top: -3%;
+    font-family: inherit;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button:active {
+    box-shadow: 0 2px 0 #787878;
+    position: relative;
+    top: -1%;
+
+}
