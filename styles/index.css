@@ -143,7 +143,7 @@ footer {
 }
 
 .Cerrar {
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     left: 100%;
     top: 0;
@@ -275,7 +275,7 @@ header {
 
 table {
     /* position relative to include a band on the left of the container */
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     margin: 0 1rem;
@@ -286,6 +286,7 @@ table {
     /* spacing to separate the table rows vertically */
     border-spacing: 0 1rem;
 }
+
 /* with a pseudo element add a band with a repeating linear gradient */
 table:before {
     position: absolute;
@@ -298,11 +299,13 @@ table:before {
     border: 1px solid #38383F;
     background: repeating-linear-gradient(-45deg, #15151E 0px, #15151E 4px, #38383F 4px, #38383F 8px);
 }
+
 /* center every element nested in a table row */
 table tr > * {
     text-align: center;
     padding: 0.5rem;
 }
+
 /* align every second item of each row to the left */
 table tr > *:nth-child(2) {
     text-align: left;
@@ -329,10 +332,12 @@ table td.driver {
     font-size: 1.1rem;
     letter-spacing: 0.05rem;
 }
+
 table td.driver strong {
     text-transform: uppercase;
     font-weight: 500;
 }
+
 table td.driver span {
     text-transform: capitalize;
     margin-left: 0.75rem;

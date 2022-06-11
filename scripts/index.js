@@ -1,7 +1,17 @@
+/**
+ * Te redirige a la página de creación de perfil
+ * @method PlayReDirect()
+ */
+
 function PlayReDirect() {
     location.href = 'profile.html';
 
 }
+
+/**
+ * Abre la tabla de puntuaciones
+ * @method AbrirLeaderBoard()
+ */
 
 function AbrirLeaderBoard() {
 
@@ -13,9 +23,14 @@ function AbrirLeaderBoard() {
     LBBtn.setAttribute("disabled", "disabled");
     CJBtn.setAttribute("disabled", "disabled");
 
-    LoadLeaderBoardData();
+    // LoadLeaderBoardData();
 
 }
+
+/**
+ * Cierra la tabla de puntuaciones
+ * @method CerrarLeaderBoard()
+ */
 
 function CerrarLeaderBoard() {
     var DivLB = document.getElementById("LeaderBoard");
@@ -27,6 +42,11 @@ function CerrarLeaderBoard() {
     CJBtn.removeAttribute("disabled");
 }
 
+/**
+ * Abre la ventana de ¿Como jugar?
+ * @method AbrirComoJugar()
+ */
+
 function AbrirComoJugar() {
     var DivCJ = document.getElementById("ComoJugar");
     var LBBtn = document.getElementById("LeaderBoardBtn");
@@ -36,6 +56,11 @@ function AbrirComoJugar() {
     LBBtn.setAttribute("disabled", "disabled");
     CJBtn.setAttribute("disabled", "disabled");
 }
+
+/**
+ * Cierra la ventana de ¿Como jugar?
+ * @method CerrarComoJugar()
+ */
 
 function CerrarComoJugar() {
     var DivCJ = document.getElementById("ComoJugar");
@@ -49,21 +74,3 @@ function CerrarComoJugar() {
 
 /* LEADERBOARD CONFIG */
 
-function LoadLeaderBoardData(){
-    const leaderboard = [
-        {
-            name: 'MaximoLR',
-            score: 10
-        },
-        {
-            name: 'Lucas',
-            score: 3
-        },
-        {
-            name: 'Bro',
-            score: 5
-        }
-    ];
-    const LBTable = document.getElementById('LB');
-
-}

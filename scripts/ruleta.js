@@ -99,52 +99,39 @@ let mouse = {
 
 Fichas.Azul.addEventListener("click", function () {
     FS = 1;
+    Fichas.Azul.style.border = "10px solid white";
+    Fichas.Roja.style.border = "none";
+    Fichas.Verde.style.border = "none";
+    Fichas.Negra.style.border = "none";
 });
-
 Fichas.Roja.addEventListener("click", function () {
     FS = 2;
+    Fichas.Azul.style.border = "none";
+    Fichas.Roja.style.border = "10px solid white";
+    Fichas.Verde.style.border = "none";
+    Fichas.Negra.style.border = "none";
 });
 Fichas.Verde.addEventListener("click", function () {
     FS = 3;
+    Fichas.Azul.style.border = "none";
+    Fichas.Roja.style.border = "none";
+    Fichas.Verde.style.border = "10px solid white";
+    Fichas.Negra.style.border = "none";
 });
 Fichas.Negra.addEventListener("click", function () {
     FS = 4;
+    Fichas.Azul.style.border = "none";
+    Fichas.Roja.style.border = "none";
+    Fichas.Verde.style.border = "none";
+    Fichas.Negra.style.border = "10px solid white";
 });
 
-window.addEventListener('click', function (event) {
+document.getElementById("canvas_divs_container").addEventListener('click', function (event) {
 
     const interactivecanvas = document.getElementById('tablero_fichas')
-    const ctx = interactivecanvas.getContext('2d');
     const rect = interactivecanvas.getBoundingClientRect();
     const CW = interactivecanvas.width;
     const CH = interactivecanvas.height;
-
-    switch (FS) {
-        case 1:
-            Fichas.Azul.style.border = "10px solid white";
-            Fichas.Roja.style.border = "none";
-            Fichas.Verde.style.border = "none";
-            Fichas.Negra.style.border = "none";
-            break;
-        case 2:
-            Fichas.Azul.style.border = "none";
-            Fichas.Roja.style.border = "10px solid white";
-            Fichas.Verde.style.border = "none";
-            Fichas.Negra.style.border = "none";
-            break;
-        case 3:
-            Fichas.Azul.style.border = "none";
-            Fichas.Roja.style.border = "none";
-            Fichas.Verde.style.border = "10px solid white";
-            Fichas.Negra.style.border = "none";
-            break;
-        case 4:
-            Fichas.Azul.style.border = "none";
-            Fichas.Roja.style.border = "none";
-            Fichas.Verde.style.border = "none";
-            Fichas.Negra.style.border = "10px solid white";
-            break;
-    }
 
     mouse.x = CW * ((event.clientX - rect.left) / interactivecanvas.clientWidth);
     mouse.y = CH * ((event.clientY - rect.top) / interactivecanvas.clientHeight);
@@ -228,9 +215,9 @@ window.addEventListener('click', function (event) {
 });
 
 /**
-* Se encarga de dibujar el tablero
-* @method drawTablero()
-*/
+ * Se encarga de dibujar el tablero
+ * @method drawTablero()
+ */
 
 function drawTablero() {
 
