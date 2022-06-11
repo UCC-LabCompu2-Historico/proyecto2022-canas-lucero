@@ -664,7 +664,7 @@ button:focus:not(:focus-visible) {
     border: 1px solid;
     border-radius: 50%;
     background-size: cover;
-    background-image: url("http://res.cloudinary.com/camcash17/image/upload/v1512576896/roulette_wheel_f2zhdb.jpg");
+    background-image: url("https://res.cloudinary.com/camcash17/image/upload/v1512576896/roulette_wheel_f2zhdb.jpg");
     animation-name: spin;
     animation-duration: 7000ms;
     animation-iteration-count: infinite;
