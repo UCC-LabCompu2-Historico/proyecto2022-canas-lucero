@@ -559,6 +559,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T3 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
                         break;
                     case 2:
@@ -567,6 +575,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T3 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
                         break;
                     case 3:
@@ -575,6 +591,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T3 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
                         break;
                     case 4:
@@ -583,19 +607,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T3 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
             }
             break;
         case 4:
@@ -607,6 +631,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T4 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
                         break;
                     case 2:
@@ -615,6 +647,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T4 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
                         break;
                     case 3:
@@ -623,6 +663,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T4 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
                         break;
                     case 4:
@@ -631,19 +679,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T4 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
             }
             break;
         case 5:
@@ -655,6 +703,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T5 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
                         break;
                     case 2:
@@ -663,6 +719,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T5 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
                         break;
                     case 3:
@@ -671,6 +735,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T5 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
                         break;
                     case 4:
@@ -679,19 +751,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T5 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
             }
             break;
         case 6:
@@ -703,6 +775,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T6 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
                         break;
                     case 2:
@@ -711,6 +791,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T6 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
                         break;
                     case 3:
@@ -719,6 +807,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T6 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
                         break;
                     case 4:
@@ -727,19 +823,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T6 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
             }
             break;
         case 7:
@@ -751,6 +847,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T7 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
                         break;
                     case 2:
@@ -759,6 +863,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T7 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
                         break;
                     case 3:
@@ -767,6 +879,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T7 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
                         break;
                     case 4:
@@ -775,19 +895,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T7 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
             }
             break;
         case 8:
@@ -799,6 +919,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T8 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
                         break;
                     case 2:
@@ -807,6 +935,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T8 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
                         break;
                     case 3:
@@ -815,6 +951,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T8 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
                         break;
                     case 4:
@@ -823,19 +967,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T8 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
             }
             break;
         case 9:
@@ -847,6 +991,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T9 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
                         break;
                     case 2:
@@ -855,6 +1007,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T9 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
                         break;
                     case 3:
@@ -863,6 +1023,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T9 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
                         break;
                     case 4:
@@ -871,19 +1039,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T9 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
             }
             break;
         case 10:
@@ -895,6 +1063,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T10 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
                         break;
                     case 2:
@@ -903,6 +1079,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T10 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
                         break;
                     case 3:
@@ -911,6 +1095,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T10 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
                         break;
                     case 4:
@@ -919,19 +1111,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T10 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                 break;
             }
         case 11:
@@ -943,6 +1135,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T11 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
                         break;
                     case 2:
@@ -951,6 +1151,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T11 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
                         break;
                     case 3:
@@ -959,6 +1167,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T11 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
                         break;
                     case 4:
@@ -967,19 +1183,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T11 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT11.innerHTML = TableroPosCounter.T11
             }
             break;
         case 12:
@@ -991,6 +1207,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T12 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
                         break;
                     case 2:
@@ -999,6 +1223,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T12 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
                         break;
                     case 3:
@@ -1007,6 +1239,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T12 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
                         break;
                     case 4:
@@ -1015,19 +1255,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T12 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
             }
             break;
         case 13:
@@ -1039,6 +1279,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T13 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
                         break;
                     case 2:
@@ -1047,6 +1295,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T13 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
                         break;
                     case 3:
@@ -1055,6 +1311,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T13 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
                         break;
                     case 4:
@@ -1063,19 +1327,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T13 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
             }
             break;
         case 14:
@@ -1087,6 +1351,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T14 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
                         break;
                     case 2:
@@ -1095,6 +1367,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T14 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
                         break;
                     case 3:
@@ -1103,6 +1383,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T14 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
                         break;
                     case 4:
@@ -1111,19 +1399,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T14 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
             }
             break;
         case 15:
@@ -1135,6 +1423,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T15 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
                         break;
                     case 2:
@@ -1143,6 +1439,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T15 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
                         break;
                     case 3:
@@ -1151,6 +1455,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T15 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
                         break;
                     case 4:
@@ -1159,19 +1471,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T15 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
             }
             break;
         case 16:
@@ -1183,6 +1495,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T16 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
                         break;
                     case 2:
@@ -1191,6 +1511,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T16 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
                         break;
                     case 3:
@@ -1199,6 +1527,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T16 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
                         break;
                     case 4:
@@ -1207,19 +1543,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T16 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
             }
             break;
         case 17:
@@ -1231,6 +1567,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T17 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
                         break;
                     case 2:
@@ -1239,6 +1583,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T17 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
                         break;
                     case 3:
@@ -1247,6 +1599,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T17 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
                         break;
                     case 4:
@@ -1255,19 +1615,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T17 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
             }
             break;
         case 18:
@@ -1279,6 +1639,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T18 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
                         break;
                     case 2:
@@ -1287,6 +1655,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T18 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
                         break;
                     case 3:
@@ -1295,6 +1671,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T18 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
                         break;
                     case 4:
@@ -1303,19 +1687,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T18 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
             }
             break;
         case 19:
@@ -1327,6 +1711,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T19 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
                         break;
                     case 2:
@@ -1335,6 +1727,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T19 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
                         break;
                     case 3:
@@ -1343,6 +1743,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T19 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
                         break;
                     case 4:
@@ -1351,19 +1759,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T19 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
             }
             break;
         case 20:
@@ -1375,6 +1783,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T20 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
                         break;
                     case 2:
@@ -1383,6 +1799,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T20 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
                         break;
                     case 3:
@@ -1391,6 +1815,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T20 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
                         break;
                     case 4:
@@ -1399,19 +1831,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T20 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
             }
             break;
         case 21:
@@ -1423,6 +1855,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T21 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
                         break;
                     case 2:
@@ -1431,6 +1871,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T21 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
                         break;
                     case 3:
@@ -1439,6 +1887,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T21 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
                         break;
                     case 4:
@@ -1447,19 +1903,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T21 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
             }
             break;
         case 22:
@@ -1471,6 +1927,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T22 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
                         break;
                     case 2:
@@ -1479,6 +1943,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T22 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
                         break;
                     case 3:
@@ -1487,6 +1959,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T22 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
                         break;
                     case 4:
@@ -1495,19 +1975,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T22 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
             }
             break;
         case 23:
@@ -1519,6 +1999,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T23 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
                         break;
                     case 2:
@@ -1527,6 +2015,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T23 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
                         break;
                     case 3:
@@ -1535,6 +2031,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T23 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
                         break;
                     case 4:
@@ -1543,19 +2047,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T23 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
             }
             break;
         case 24:
@@ -1567,6 +2071,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T24 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
                         break;
                     case 2:
@@ -1575,6 +2087,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T24 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
                         break;
                     case 3:
@@ -1583,6 +2103,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T24 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
                         break;
                     case 4:
@@ -1591,19 +2119,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T24 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
             }
             break;
         case 25:
@@ -1615,6 +2143,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T25 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
                         break;
                     case 2:
@@ -1623,6 +2159,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T25 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
                         break;
                     case 3:
@@ -1631,6 +2175,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T25 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
                         break;
                     case 4:
@@ -1639,19 +2191,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T25 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
             }
             break;
         case 26:
@@ -1663,6 +2215,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T26 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
                         break;
                     case 2:
@@ -1671,6 +2231,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T26 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
                         break;
                     case 3:
@@ -1679,6 +2247,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T26 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
                         break;
                     case 4:
@@ -1687,19 +2263,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T26 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
             }
             break;
         case 27:
@@ -1711,6 +2287,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T27 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
                         break;
                     case 2:
@@ -1719,6 +2303,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T27 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
                         break;
                     case 3:
@@ -1727,6 +2319,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T27 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
                         break;
                     case 4:
@@ -1735,19 +2335,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T27 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
             }
             break;
         case 28:
@@ -1759,6 +2359,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T28 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
                         break;
                     case 2:
@@ -1767,6 +2375,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T28 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
                         break;
                     case 3:
@@ -1775,6 +2391,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T28 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
                         break;
                     case 4:
@@ -1783,19 +2407,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T28 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
             }
             break;
         case 29:
@@ -1807,6 +2431,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T29 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
                         break;
                     case 2:
@@ -1815,6 +2447,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T29 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
                         break;
                     case 3:
@@ -1823,6 +2463,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T29 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
                         break;
                     case 4:
@@ -1831,19 +2479,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T29 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
             }
             break;
         case 30:
@@ -1855,6 +2503,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T30 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
                         break;
                     case 2:
@@ -1863,6 +2519,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T30 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
                         break;
                     case 3:
@@ -1871,6 +2535,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T30 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
                         break;
                     case 4:
@@ -1879,19 +2551,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T30 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
             }
             break;
         case 31:
@@ -1903,6 +2575,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T31 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
                         break;
                     case 2:
@@ -1911,6 +2591,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T31 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
                         break;
                     case 3:
@@ -1919,6 +2607,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T31 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
                         break;
                     case 4:
@@ -1927,19 +2623,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T31 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
             }
             break;
         case 32:
@@ -1951,6 +2647,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T32 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
                         break;
                     case 2:
@@ -1959,6 +2663,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T32 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
                         break;
                     case 3:
@@ -1967,6 +2679,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T32 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
                         break;
                     case 4:
@@ -1975,19 +2695,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T32 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
             }
             break;
         case 33:
@@ -1999,6 +2719,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T33 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
                         break;
                     case 2:
@@ -2007,6 +2735,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T33 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
                         break;
                     case 3:
@@ -2015,6 +2751,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T33 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
                         break;
                     case 4:
@@ -2023,19 +2767,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T33 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
             }
             break;
         case 34:
@@ -2047,6 +2791,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T34 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
                         break;
                     case 2:
@@ -2055,6 +2807,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T34 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
                         break;
                     case 3:
@@ -2063,6 +2823,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T34 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
                         break;
                     case 4:
@@ -2071,19 +2839,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T34 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
             }
             break;
         case 35:
@@ -2095,6 +2863,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T35 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
                         break;
                     case 2:
@@ -2103,6 +2879,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T35 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
                         break;
                     case 3:
@@ -2111,6 +2895,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T35 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
                         break;
                     case 4:
@@ -2119,19 +2911,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T35 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
             }
             break;
         case 36:
@@ -2143,6 +2935,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T36 += 5;
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
                         break;
                     case 2:
@@ -2151,6 +2951,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T36 += 10;
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
                         break;
                     case 3:
@@ -2159,6 +2967,14 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T36 += 50;
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
                         break;
                     case 4:
@@ -2167,19 +2983,19 @@ function drawFicha(posx, posy, color, post) {
                             TableroPosCounter.T36 += 100;
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.fill();
+                            Ctx.stroke();
+                            Ctx.beginPath();
+                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.stroke();
+                            AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
                         break;
                     case 0:
                         break;
                 }
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
-                Ctx.fill();
-                Ctx.stroke();
-                Ctx.beginPath();
-                Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
-                Ctx.stroke();
-                AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
             }
             break;
     }

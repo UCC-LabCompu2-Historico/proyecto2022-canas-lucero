@@ -21,6 +21,7 @@ body {
     width: 50vw;
     border: 1px solid #000000;
     z-index: 1;
+
 }
 
 #tablero_fichas {
@@ -44,6 +45,7 @@ body {
     width: 50vw;
     border: 1px solid #fa060d;
     z-index: 3;
+    cursor: pointer;
 
 }
 
@@ -573,6 +575,7 @@ button:focus:not(:focus-visible) {
     border-style: solid;
     border-color: grey;
     border-width: thick;
+    cursor: pointer;
 
 }
 
