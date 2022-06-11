@@ -1,14 +1,48 @@
-const Grid = {
-    rows: 3,
-    columns: 12,
-};
-
 let Balance = sessionStorage.getItem("balance");
 
+/* TABLERO */
+
+const Grid = {
+    rows: 3, columns: 12,
+};
+
 let TableroPosCounter = {
-    T1: 0, T2: 0, T3: 0, T4: 0, T5: 0, T6: 0, T7: 0, T8: 0, T9: 0, T10: 0, T11: 0, T12: 0,
-    T13: 0, T14: 0, T15: 0, T16: 0, T17: 0, T18: 0, T19: 0, T20: 0, T21: 0, T22: 0, T23: 0, T24: 0,
-    T25: 0, T26: 0, T27: 0, T28: 0, T29: 0, T30: 0, T31: 0, T32: 0, T33: 0, T34: 0, T35: 0, T36: 0,
+    T1: 0,
+    T2: 0,
+    T3: 0,
+    T4: 0,
+    T5: 0,
+    T6: 0,
+    T7: 0,
+    T8: 0,
+    T9: 0,
+    T10: 0,
+    T11: 0,
+    T12: 0,
+    T13: 0,
+    T14: 0,
+    T15: 0,
+    T16: 0,
+    T17: 0,
+    T18: 0,
+    T19: 0,
+    T20: 0,
+    T21: 0,
+    T22: 0,
+    T23: 0,
+    T24: 0,
+    T25: 0,
+    T26: 0,
+    T27: 0,
+    T28: 0,
+    T29: 0,
+    T30: 0,
+    T31: 0,
+    T32: 0,
+    T33: 0,
+    T34: 0,
+    T35: 0,
+    T36: 0,
 };
 
 let AmountDivs = {
@@ -60,8 +94,7 @@ const Fichas = {
 let FS = 0;
 
 let mouse = {
-    x: null,
-    y: null,
+    x: null, y: null,
 };
 
 Fichas.Azul.addEventListener("click", function () {
@@ -80,93 +113,119 @@ Fichas.Negra.addEventListener("click", function () {
 
 window.addEventListener('click', function (event) {
 
-        const interactivecanvas = document.getElementById('tablero_fichas')
-        const ctx = interactivecanvas.getContext('2d');
-        const rect = interactivecanvas.getBoundingClientRect();
-        const CW = interactivecanvas.width;
-        const CH = interactivecanvas.height;
+    const interactivecanvas = document.getElementById('tablero_fichas')
+    const ctx = interactivecanvas.getContext('2d');
+    const rect = interactivecanvas.getBoundingClientRect();
+    const CW = interactivecanvas.width;
+    const CH = interactivecanvas.height;
 
-        mouse.x = CW * ((event.clientX - rect.left) / interactivecanvas.clientWidth);
-        mouse.y = CH * ((event.clientY - rect.top) / interactivecanvas.clientHeight);
-
-        if (FS !== 0) {
-            if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(12.5, 25, FS, 3);
-            } else if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(12.5, 75, FS, 2);
-            } else if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(12.5, 125, FS, 1);
-            } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(37.5, 25, FS, 6);
-            } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(37.5, 75, FS, 5);
-            } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(37.5, 125, FS, 4);
-            } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(62.5, 25, FS, 9);
-            } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(62.5, 75, FS, 8);
-            } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(62.5, 125, FS, 7);
-            } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(87.5, 25, FS, 12);
-            } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(87.5, 75, FS, 11);
-            } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(87.5, 125, FS, 10);
-            } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(112.5, 25, FS, 15);
-            } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(112.5, 75, FS, 14);
-            } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(112.5, 125, FS, 13);
-            } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(137.5, 25, FS, 18);
-            } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(137.5, 75, FS, 17);
-            } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(137.5, 125, FS, 16);
-            } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(162.5, 25, FS, 21);
-            } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(162.5, 75, FS, 20);
-            } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(162.5, 125, FS, 19);
-            } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(187.5, 25, FS, 24);
-            } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(187.5, 75, FS, 23);
-            } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(187.5, 125, FS, 22);
-            } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(212.5, 25, FS, 27);
-            } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(212.5, 75, FS, 26);
-            } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(212.5, 125, FS, 25);
-            } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(237.5, 25, FS, 30);
-            } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(237.5, 75, FS, 29);
-            } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(237.5, 125, FS, 28);
-            } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(262.5, 25, FS, 33);
-            } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(262.5, 75, FS, 32);
-            } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(262.5, 125, FS, 31);
-            } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
-                drawFicha(287.5, 25, FS, 36);
-            } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
-                drawFicha(287.5, 75, FS, 35);
-            } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
-                drawFicha(287.5, 125, FS, 34);
-            }
-            ProfileCardDataLoading();
-        }
+    switch (FS) {
+        case 1:
+            Fichas.Azul.style.border = "10px solid white";
+            Fichas.Roja.style.border = "none";
+            Fichas.Verde.style.border = "none";
+            Fichas.Negra.style.border = "none";
+            break;
+        case 2:
+            Fichas.Azul.style.border = "none";
+            Fichas.Roja.style.border = "10px solid white";
+            Fichas.Verde.style.border = "none";
+            Fichas.Negra.style.border = "none";
+            break;
+        case 3:
+            Fichas.Azul.style.border = "none";
+            Fichas.Roja.style.border = "none";
+            Fichas.Verde.style.border = "10px solid white";
+            Fichas.Negra.style.border = "none";
+            break;
+        case 4:
+            Fichas.Azul.style.border = "none";
+            Fichas.Roja.style.border = "none";
+            Fichas.Verde.style.border = "none";
+            Fichas.Negra.style.border = "10px solid white";
+            break;
     }
-);
+
+    mouse.x = CW * ((event.clientX - rect.left) / interactivecanvas.clientWidth);
+    mouse.y = CH * ((event.clientY - rect.top) / interactivecanvas.clientHeight);
+
+    if (FS !== 0) {
+        if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(80, 180, FS, 3);
+        } else if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(80, 540, FS, 2);
+        } else if (mouse.x >= 0 && mouse.x <= CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(80, 900, FS, 1);
+        } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(240, 180, FS, 6);
+        } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(240, 540, FS, 5);
+        } else if (mouse.x >= CW / Grid.columns && mouse.x <= 2 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(240, 900, FS, 4);
+        } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(400, 180, FS, 9);
+        } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(400, 540, FS, 8);
+        } else if (mouse.x >= 2 * CW / Grid.columns && mouse.x <= 3 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(400, 900, FS, 7);
+        } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(560, 180, FS, 12);
+        } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(560, 540, FS, 11);
+        } else if (mouse.x >= 3 * CW / Grid.columns && mouse.x <= 4 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(560, 900, FS, 10);
+        } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(720, 180, FS, 15);
+        } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(720, 540, FS, 14);
+        } else if (mouse.x >= 4 * CW / Grid.columns && mouse.x <= 5 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(720, 900, FS, 13);
+        } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(880, 180, FS, 18);
+        } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(880, 540, FS, 17);
+        } else if (mouse.x >= 5 * CW / Grid.columns && mouse.x <= 6 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(880, 900, FS, 16);
+        } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1040, 180, FS, 21);
+        } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1040, 540, FS, 20);
+        } else if (mouse.x >= 6 * CW / Grid.columns && mouse.x <= 7 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1040, 900, FS, 19);
+        } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1200, 180, FS, 24);
+        } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1200, 540, FS, 23);
+        } else if (mouse.x >= 7 * CW / Grid.columns && mouse.x <= 8 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1200, 900, FS, 22);
+        } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1360, 180, FS, 27);
+        } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1360, 540, FS, 26);
+        } else if (mouse.x >= 8 * CW / Grid.columns && mouse.x <= 9 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1360, 900, FS, 25);
+        } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1520, 180, FS, 30);
+        } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1520, 540, FS, 29);
+        } else if (mouse.x >= 9 * CW / Grid.columns && mouse.x <= 10 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1520, 900, FS, 28);
+        } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1680, 180, FS, 33);
+        } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1680, 540, FS, 32);
+        } else if (mouse.x >= 10 * CW / Grid.columns && mouse.x <= 11 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1680, 900, FS, 31);
+        } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= 0 && mouse.y <= CH / Grid.rows) {
+            drawFicha(1840, 180, FS, 36);
+        } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= CH / Grid.rows && mouse.y <= 2 * CH / Grid.rows) {
+            drawFicha(1840, 540, FS, 35);
+        } else if (mouse.x >= 11 * CW / Grid.columns && mouse.x <= 12 * CW / Grid.columns && mouse.y >= 2 * CH / Grid.rows && mouse.y <= 3 * CH / Grid.rows) {
+            drawFicha(1840, 900, FS, 34);
+        }
+        ProfileCardDataLoading();
+    }
+});
 
 function drawTablero() {
 
@@ -177,7 +236,8 @@ function drawTablero() {
     let ColumnNumber = 0;
 
     Context.strokeStyle = "white";
-    Context.lineWidth = "2";
+    Context.lineWidth = "10";
+    Context.font = "80px Arial Black"
 
     // First Column
     Context.fillStyle = "red";
@@ -190,11 +250,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(10, 28);
-    Context.strokeText("1", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("2", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("3", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(55, 200);
+    Context.fillText("1", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("2", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("3", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Second Column
@@ -208,11 +268,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(10, 28);
-    Context.strokeText("4", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("5", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("6", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(55, 200);
+    Context.fillText("4", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("5", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("6", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Third Column
@@ -226,11 +286,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(10, 28);
-    Context.strokeText("7", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("8", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("9", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(55, 200);
+    Context.fillText("7", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("8", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("9", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Forth Column
@@ -244,11 +304,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("10", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("11", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("12", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("10", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("11", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("12", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Fifth Column
@@ -262,11 +322,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("13", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("14", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("15", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("13", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("14", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("15", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Sixth Column
@@ -280,11 +340,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("16", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("17", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("18", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("16", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("17", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("18", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Seventh Column
@@ -298,11 +358,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("19", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("20", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("21", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("19", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("20", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("21", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Eighth Column
@@ -316,11 +376,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("22", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("23", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("24", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("22", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("23", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("24", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Ninth Column
@@ -334,11 +394,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("25", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("26", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("27", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("25", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("26", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("27", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Tenth Column
@@ -352,11 +412,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("28", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("29", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("30", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("28", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("29", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("30", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Eleventh Column
@@ -370,11 +430,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("31", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("32", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("33", ColumnNumber * CW / Grid.columns, 0);
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("31", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("32", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("33", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
     ColumnNumber += 1;
     // Twelfth Column
@@ -388,12 +448,11 @@ function drawTablero() {
     Context.strokeRect(ColumnNumber * CW / Grid.columns, CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.strokeRect(ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows, CW / Grid.columns, CH / Grid.rows);
     Context.save();
-    Context.lineWidth = "0.5";
-    Context.translate(7, 28);
-    Context.strokeText("34", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
-    Context.strokeText("35", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
-    Context.strokeText("36", ColumnNumber * CW / Grid.columns, 0);
-
+    Context.fillStyle = "white";
+    Context.translate(25, 200);
+    Context.fillText("34", ColumnNumber * CW / Grid.columns, 2 * CH / Grid.rows);
+    Context.fillText("35", ColumnNumber * CW / Grid.columns, CH / Grid.rows);
+    Context.fillText("36", ColumnNumber * CW / Grid.columns, 0);
     Context.restore();
 
 }
@@ -404,6 +463,7 @@ function drawFicha(posx, posy, color, post) {
     const Ctx = canvas_fichas.getContext('2d');
 
     Ctx.strokeStyle = 'white';
+    Ctx.lineWidth = "5";
 
     switch (post) {
         case 1:
@@ -416,11 +476,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT1.innerHTML = TableroPosCounter.T1;
                         }
@@ -432,11 +492,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT1.innerHTML = TableroPosCounter.T1;
                         }
@@ -448,11 +508,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT1.innerHTML = TableroPosCounter.T1;
                         }
@@ -464,11 +524,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT1.innerHTML = TableroPosCounter.T1;
                         }
@@ -488,11 +548,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT2.innerHTML = TableroPosCounter.T2;
                         }
@@ -504,11 +564,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT2.innerHTML = TableroPosCounter.T2;
                         }
@@ -520,11 +580,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT2.innerHTML = TableroPosCounter.T2;
                         }
@@ -536,11 +596,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT2.innerHTML = TableroPosCounter.T2;
                         }
@@ -560,11 +620,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
@@ -576,11 +636,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
@@ -592,11 +652,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
@@ -608,11 +668,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT3.innerHTML = TableroPosCounter.T3;
                         }
@@ -632,11 +692,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
@@ -648,11 +708,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
@@ -664,11 +724,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
@@ -680,11 +740,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT4.innerHTML = TableroPosCounter.T4;
                         }
@@ -704,11 +764,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
@@ -720,11 +780,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
@@ -736,11 +796,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
@@ -752,11 +812,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT5.innerHTML = TableroPosCounter.T5;
                         }
@@ -776,11 +836,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
@@ -792,11 +852,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
@@ -808,11 +868,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
@@ -824,11 +884,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT6.innerHTML = TableroPosCounter.T6;
                         }
@@ -848,11 +908,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
@@ -864,11 +924,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
@@ -880,11 +940,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
@@ -896,11 +956,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT7.innerHTML = TableroPosCounter.T7;
                         }
@@ -920,11 +980,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
@@ -936,11 +996,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
@@ -952,11 +1012,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
@@ -968,11 +1028,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT8.innerHTML = TableroPosCounter.T8;
                         }
@@ -992,11 +1052,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
@@ -1008,11 +1068,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
@@ -1024,11 +1084,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
@@ -1040,11 +1100,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT9.innerHTML = TableroPosCounter.T9;
                         }
@@ -1064,11 +1124,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
@@ -1080,11 +1140,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
@@ -1096,11 +1156,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
@@ -1112,11 +1172,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT10.innerHTML = TableroPosCounter.T10;
                         }
@@ -1136,11 +1196,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
@@ -1152,11 +1212,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
@@ -1168,11 +1228,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
@@ -1184,11 +1244,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT11.innerHTML = TableroPosCounter.T11
                         }
@@ -1208,11 +1268,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
@@ -1224,11 +1284,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
@@ -1240,11 +1300,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
@@ -1256,11 +1316,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT12.innerHTML = TableroPosCounter.T12;
                         }
@@ -1280,11 +1340,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
@@ -1296,11 +1356,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
@@ -1312,11 +1372,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
@@ -1328,11 +1388,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT13.innerHTML = TableroPosCounter.T13;
                         }
@@ -1352,11 +1412,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
@@ -1368,11 +1428,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
@@ -1384,11 +1444,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
@@ -1400,11 +1460,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT14.innerHTML = TableroPosCounter.T14;
                         }
@@ -1424,11 +1484,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
@@ -1440,11 +1500,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
@@ -1456,11 +1516,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
@@ -1472,11 +1532,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT15.innerHTML = TableroPosCounter.T15;
                         }
@@ -1496,11 +1556,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
@@ -1512,11 +1572,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
@@ -1528,11 +1588,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
@@ -1544,11 +1604,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT16.innerHTML = TableroPosCounter.T16;
                         }
@@ -1568,11 +1628,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
@@ -1584,11 +1644,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
@@ -1600,11 +1660,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
@@ -1616,11 +1676,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT17.innerHTML = TableroPosCounter.T17;
                         }
@@ -1640,11 +1700,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
@@ -1656,11 +1716,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
@@ -1672,11 +1732,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
@@ -1688,11 +1748,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT18.innerHTML = TableroPosCounter.T18;
                         }
@@ -1712,11 +1772,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
@@ -1728,11 +1788,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
@@ -1744,11 +1804,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
@@ -1760,11 +1820,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT19.innerHTML = TableroPosCounter.T19;
                         }
@@ -1784,11 +1844,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
@@ -1800,11 +1860,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
@@ -1816,11 +1876,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
@@ -1832,11 +1892,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT20.innerHTML = TableroPosCounter.T20;
                         }
@@ -1856,11 +1916,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
@@ -1872,11 +1932,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
@@ -1888,11 +1948,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
@@ -1904,11 +1964,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT21.innerHTML = TableroPosCounter.T21;
                         }
@@ -1928,11 +1988,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
@@ -1944,11 +2004,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
@@ -1960,11 +2020,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
@@ -1976,11 +2036,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT22.innerHTML = TableroPosCounter.T22;
                         }
@@ -2000,11 +2060,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
@@ -2016,11 +2076,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
@@ -2032,11 +2092,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
@@ -2048,11 +2108,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT23.innerHTML = TableroPosCounter.T23;
                         }
@@ -2072,11 +2132,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
@@ -2088,11 +2148,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
@@ -2104,11 +2164,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
@@ -2120,11 +2180,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT24.innerHTML = TableroPosCounter.T24;
                         }
@@ -2144,11 +2204,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
@@ -2160,11 +2220,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
@@ -2176,11 +2236,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
@@ -2192,11 +2252,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT25.innerHTML = TableroPosCounter.T25;
                         }
@@ -2216,11 +2276,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
@@ -2232,11 +2292,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
@@ -2248,11 +2308,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
@@ -2264,11 +2324,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT26.innerHTML = TableroPosCounter.T26;
                         }
@@ -2288,11 +2348,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
@@ -2304,11 +2364,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
@@ -2320,11 +2380,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
@@ -2336,11 +2396,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT27.innerHTML = TableroPosCounter.T27;
                         }
@@ -2360,11 +2420,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
@@ -2376,11 +2436,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
@@ -2392,11 +2452,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
@@ -2408,11 +2468,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT28.innerHTML = TableroPosCounter.T28;
                         }
@@ -2432,11 +2492,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
@@ -2448,11 +2508,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
@@ -2464,11 +2524,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
@@ -2480,11 +2540,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT29.innerHTML = TableroPosCounter.T29;
                         }
@@ -2504,11 +2564,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
@@ -2520,11 +2580,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
@@ -2536,11 +2596,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
@@ -2552,11 +2612,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT30.innerHTML = TableroPosCounter.T30;
                         }
@@ -2576,11 +2636,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
@@ -2592,11 +2652,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
@@ -2608,11 +2668,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
@@ -2624,11 +2684,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT31.innerHTML = TableroPosCounter.T31;
                         }
@@ -2648,11 +2708,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
@@ -2664,11 +2724,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
@@ -2680,11 +2740,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
@@ -2696,11 +2756,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT32.innerHTML = TableroPosCounter.T32;
                         }
@@ -2720,11 +2780,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
@@ -2736,11 +2796,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
@@ -2752,11 +2812,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
@@ -2768,11 +2828,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT33.innerHTML = TableroPosCounter.T33;
                         }
@@ -2792,11 +2852,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
@@ -2808,11 +2868,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
@@ -2824,11 +2884,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
@@ -2840,11 +2900,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT34.innerHTML = TableroPosCounter.T34;
                         }
@@ -2864,11 +2924,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
@@ -2880,11 +2940,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
@@ -2896,11 +2956,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
@@ -2912,11 +2972,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT35.innerHTML = TableroPosCounter.T35;
                         }
@@ -2936,11 +2996,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 5;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
@@ -2952,11 +3012,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 10;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
@@ -2968,11 +3028,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 50;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
@@ -2984,11 +3044,11 @@ function drawFicha(posx, posy, color, post) {
                             Balance -= 100;
                             sessionStorage.setItem("balance", Balance);
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 10, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 60, 0, Math.PI * 2);
                             Ctx.fill();
                             Ctx.stroke();
                             Ctx.beginPath();
-                            Ctx.arc(posx, posy, 7, 0, Math.PI * 2);
+                            Ctx.arc(posx, posy, 45, 0, Math.PI * 2);
                             Ctx.stroke();
                             AmountDivs.AT36.innerHTML = TableroPosCounter.T36;
                         }
@@ -3018,6 +3078,11 @@ function ClearFichas() {
 
     Ctx.clearRect(0, 0, canvas_fichas.width, canvas_fichas.height);
     FS = 0;
+
+    Fichas.Azul.style.border = "none";
+    Fichas.Roja.style.border = "none";
+    Fichas.Verde.style.border = "none";
+    Fichas.Negra.style.border = "none";
 
     TableroPosCounter.T1 = 0;
     TableroPosCounter.T2 = 0;
@@ -3107,3 +3172,6 @@ function ProfileCardDataLoading() {
     BalanceLabel.innerHTML = "$" + Balance + "⁰⁰";
     UsernameLabel.innerHTML = Username;
 }
+
+
+/* RULETA */

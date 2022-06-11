@@ -19,14 +19,27 @@
   </span>
 </button>
 
-<button id="ClearBtn" onclick="ClearFichas()">
+<button id="ClearBtn" class="Btn" onclick="ClearFichas()">
     <span class="shadow"></span>
     <span class="edge"></span>
     <span class="front text"> CLEAR </span>
 </button>
 
-<canvas id="tablero"></canvas>
-<canvas id="tablero_fichas"></canvas>
+<button id="SpinBtn" class="Btn" onclick="">
+    <span class="shadow"></span>
+    <span class="edge"></span>
+    <span class="front text"> SPIN </span>
+</button>
+
+<div class="roulette" id="roulette">
+    <div class="wheel" id="wheel">
+        <div class="wrap" id="wrap">
+            <div class="ball" id="ball"></div>
+        </div>
+    </div>
+</div>
+<canvas id="tablero" width="1920px" height="1080px"></canvas>
+<canvas id="tablero_fichas" width="1920px" height="1080px"></canvas>
 <div id="canvas_divs_container">
     <div id="T1" class="TPos">
         <div id="AT1" class="amount"></div>
@@ -150,7 +163,6 @@
     </div>
 </div>
 <div id="fichas">
-
     <button class="ficha" id="fichaazul">
         <img src="resources/fichaazulcasino.jpg" alt="Ficha Azul" class="imgficha">
     </button>
