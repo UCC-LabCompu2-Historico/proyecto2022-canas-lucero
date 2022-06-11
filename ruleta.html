@@ -9,9 +9,8 @@
     <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
     <link href="styles/ruleta.css" rel="stylesheet" type="text/css">
     <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
-    <script src="scripts/ruleta.js"></script>
 </head>
-<body>
+<body onload="drawTablero(); ProfileCardDataLoading()">
 
 <button id="BackBtn" onclick="Back()">
     <span class="shadow"></span>
@@ -20,8 +19,136 @@
   </span>
 </button>
 
-<canvas id="ruleta"></canvas>
+<button id="ClearBtn" onclick="ClearFichas()">
+    <span class="shadow"></span>
+    <span class="edge"></span>
+    <span class="front text"> CLEAR </span>
+</button>
 
+<canvas id="tablero"></canvas>
+<canvas id="tablero_fichas"></canvas>
+<div id="canvas_divs_container">
+    <div id="T1" class="TPos">
+        <div id="AT1" class="amount"></div>
+    </div>
+    <div id="T2" class="TPos">
+        <div id="AT2" class="amount"></div>
+    </div>
+    <div id="T3" class="TPos">
+        <div id="AT3" class="amount"></div>
+    </div>
+    <div id="T4" class="TPos">
+        <div id="AT4" class="amount"></div>
+    </div>
+    <div id="T5" class="TPos">
+        <div id="AT5" class="amount"></div>
+    </div>
+    <div id="T6" class="TPos">
+        <div id="AT6" class="amount"></div>
+    </div>
+    <div id="T7" class="TPos">
+        <div id="AT7" class="amount"></div>
+    </div>
+    <div id="T8" class="TPos">
+        <div id="AT8" class="amount"></div>
+    </div>
+    <div id="T9" class="TPos">
+        <div id="AT9" class="amount"></div>
+    </div>
+    <div id="T10" class="TPos">
+        <div id="AT10" class="amount"></div>
+    </div>
+    <div id="T11" class="TPos">
+        <div id="AT11" class="amount"></div>
+    </div>
+    <div id="T12" class="TPos">
+        <div id="AT12" class="amount"></div>
+    </div>
+    <div id="T13" class="TPos">
+        <div id="AT13" class="amount"></div>
+    </div>
+    <div id="T14" class="TPos">
+        <div id="AT14" class="amount"></div>
+    </div>
+    <div id="T15" class="TPos">
+        <div id="AT15" class="amount"></div>
+    </div>
+    <div id="T16" class="TPos">
+        <div id="AT16" class="amount"></div>
+    </div>
+    <div id="T17" class="TPos">
+        <div id="AT17" class="amount"></div>
+    </div>
+    <div id="T18" class="TPos">
+        <div id="AT18" class="amount"></div>
+    </div>
+    <div id="T19" class="TPos">
+        <div id="AT19" class="amount"></div>
+    </div>
+    <div id="T20" class="TPos">
+        <div id="AT20" class="amount"></div>
+    </div>
+    <div id="T21" class="TPos">
+        <div id="AT21" class="amount"></div>
+    </div>
+    <div id="T22" class="TPos">
+        <div id="AT22" class="amount"></div>
+    </div>
+    <div id="T23" class="TPos">
+        <div id="AT23" class="amount"></div>
+    </div>
+    <div id="T24" class="TPos">
+        <div id="AT24" class="amount"></div>
+    </div>
+    <div id="T25" class="TPos">
+        <div id="AT25" class="amount"></div>
+    </div>
+    <div id="T26" class="TPos">
+        <div id="AT26" class="amount"></div>
+    </div>
+    <div id="T27" class="TPos">
+        <div id="AT27" class="amount"></div>
+    </div>
+    <div id="T28" class="TPos">
+        <div id="AT28" class="amount"></div>
+    </div>
+    <div id="T29" class="TPos">
+        <div id="AT29" class="amount"></div>
+    </div>
+    <div id="T30" class="TPos">
+        <div id="AT30" class="amount"></div>
+    </div>
+    <div id="T31" class="TPos">
+        <div id="AT31" class="amount"></div>
+    </div>
+    <div id="T32" class="TPos">
+        <div id="AT32" class="amount"></div>
+    </div>
+    <div id="T33" class="TPos">
+        <div id="AT33" class="amount"></div>
+    </div>
+    <div id="T34" class="TPos">
+        <div id="AT34" class="amount"></div>
+    </div>
+    <div id="T35" class="TPos">
+        <div id="AT35" class="amount"></div>
+    </div>
+    <div id="T36" class="TPos">
+        <div id="AT36" class="amount"></div>
+    </div>
+</div>
+<div id="ProfilePlaceHolder">
+    <div class="card">
+        <img class="profile" src="resources/profile.png" alt="Icono de Perfil" draggable="false">
+        <div id="info">
+            <label id="name" class="info">Nombre de Usuario</label>
+            <h3 id="inputname"></h3>
+            <h3 id="balance" class="info">Balance</h3>
+            <h3 id="bal" class="info">$1000⁰⁰</h3>
+        </div>
+
+    </div>
+</div>
 <div id="fichas">
 
     <button class="ficha" id="fichaazul">
@@ -39,8 +166,8 @@
     <button class="ficha" id="fichanegra">
         <img src="resources/fichanegracasino.jpg" alt="Ficha Negra" class="imgficha">
     </button>
-
 </div>
-
 </body>
+<script src="scripts/ruleta.js"></script>
+<script src="scripts/profile.js"></script>
 </html>

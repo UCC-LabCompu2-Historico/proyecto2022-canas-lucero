@@ -3,7 +3,7 @@ function PlayReDirect() {
 
 }
 
-function LeaderBoard() {
+function AbrirLeaderBoard() {
 
     var DivLB = document.getElementById("LeaderBoard");
     var LBBtn = document.getElementById("LeaderBoardBtn");
@@ -12,6 +12,8 @@ function LeaderBoard() {
     DivLB.style.display = "block";
     LBBtn.setAttribute("disabled", "disabled");
     CJBtn.setAttribute("disabled", "disabled");
+
+    LoadLeaderBoardData();
 
 }
 
@@ -25,7 +27,7 @@ function CerrarLeaderBoard() {
     CJBtn.removeAttribute("disabled");
 }
 
-function ComoJugar() {
+function AbrirComoJugar() {
     var DivCJ = document.getElementById("ComoJugar");
     var LBBtn = document.getElementById("LeaderBoardBtn");
     var CJBtn = document.getElementById("HowToPlay");
@@ -43,4 +45,25 @@ function CerrarComoJugar() {
     DivCJ.style.display = "none";
     LBBtn.removeAttribute("disabled");
     CJBtn.removeAttribute("disabled");
+}
+
+/* LEADERBOARD CONFIG */
+
+function LoadLeaderBoardData(){
+    const leaderboard = [
+        {
+            name: 'MaximoLR',
+            score: 10
+        },
+        {
+            name: 'Lucas',
+            score: 3
+        },
+        {
+            name: 'Bro',
+            score: 5
+        }
+    ];
+    const LBTable = document.getElementById('LB');
+
 }

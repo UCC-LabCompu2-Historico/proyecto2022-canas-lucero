@@ -9,7 +9,6 @@
     <link href="styles/index.css" rel="stylesheet" type="text/css">
     <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href='https://css.gg/math-plus.css' rel='stylesheet'>
-    <script src="scripts/index.js"></script>
     <title>Lotus CASINO</title>
 </head>
 <body>
@@ -32,6 +31,19 @@
 
         </div>
         <div id="LeaderBoard">
+            <table id="LB" class="LeaderBoard">
+                <tr>
+                    <th>
+                        Pos
+                    </th>
+                    <th>
+                        Player
+                    </th>
+                    <th>
+                        Score
+                    </th>
+                </tr>
+            </table>
             <button id="CerrarLB" class="Cerrar" onclick="CerrarLeaderBoard()">
                 <span class="shadow"></span>
                 <span class="edge"></span>
@@ -49,13 +61,13 @@
         </div>
     </main>
     <footer>
-        <button id="HowToPlay" class="PlayButton" onclick="ComoJugar()">
+        <button id="HowToPlay" class="PlayButton" onclick="AbrirComoJugar()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span id="front2" class="front text">¿COMO JUGAR?
   </span>
         </button>
-        <button id="LeaderBoardBtn" class="PlayButton" onclick="LeaderBoard()">
+        <button id="LeaderBoardBtn" class="PlayButton" onclick="AbrirLeaderBoard()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front text">
@@ -65,4 +77,5 @@
     </footer>
 </div>
 </body>
+<script src="scripts/index.js"></script>
 </html>
