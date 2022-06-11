@@ -227,6 +227,11 @@ window.addEventListener('click', function (event) {
     }
 });
 
+/**
+* Se encarga de dibujar el tablero
+* @method drawTablero()
+*/
+
 function drawTablero() {
 
     const canvas = document.getElementById('tablero');
@@ -456,6 +461,15 @@ function drawTablero() {
     Context.restore();
 
 }
+
+/**
+ * Se encarga de colocar las fichas en el tablero según la posición seleccionada
+ * @method drawFichas()
+ * @param {number} posx - Almacena la posición en "x" donde se colocará la ficha
+ * @param {number} posy - Almacena la posición en "y" donde se colocará la ficha
+ * @param {number} color - Almacena el color de la ficha
+ * @param {number} post - Almacena el número del casillero donde se colocará la ficha
+ */
 
 function drawFicha(posx, posy, color, post) {
 
@@ -3066,6 +3080,11 @@ window.onbeforeunload = function () {
     ClearFichas();
 };
 
+/**
+ * Se encarga de borrar las fichas puestas en el tablero
+ * @method ClearFichas()
+ */
+
 function ClearFichas() {
 
     const canvas_fichas = document.getElementById('tablero_fichas');
@@ -3161,9 +3180,19 @@ function ClearFichas() {
 
 }
 
+/**
+ * Se encarga de volver a la página anterior, en este caso vuelve a "Selección de Modo de Juego"
+ * @method Back()
+ */
+
 function Back() {
     location.href = 'selectgame.html';
 }
+
+/**
+ * Se encarga de cargar/actualizar el nombre y el balance del usuario en la "ProfileCard"
+ * @method ProfileCardDataLoading()
+ */
 
 function ProfileCardDataLoading() {
     let Username = sessionStorage.getItem("username");

@@ -15,7 +15,7 @@ body {
 #tablero {
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 65%;
+    left: 68%;
     top: 35%;
     height: 55vh;
     width: 50vw;
@@ -26,7 +26,7 @@ body {
 #tablero_fichas {
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 65%;
+    left: 68%;
     top: 35%;
     height: 55vh;
     width: 50vw;
@@ -37,7 +37,7 @@ body {
 #canvas_divs_container {
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 65%;
+    left: 68%;
     top: 35%;
     height: 55vh;
     width: 50vw;
@@ -381,24 +381,75 @@ body {
     border: none;
 }
 
+/*ClearButton*/
 #ClearBtn {
     font-family: "Arial Black", serif;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 85%;
+    left: 88%;
     top: 85%;
     background: none;
 }
-
+/*SpinButton*/
 #SpinBtn {
     font-family: "Arial Black", serif;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 85%;
+    left: 88%;
     top: 75%;
+    width: 12vw;
     background: none;
 }
 
+.shadowspin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.frontspin{
+    display: block;
+    position: relative;
+    padding: 20px 17px;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+
+button:hover .frontspin {
+    transform: translateY(-8px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .frontspin {
+    transform: translateY(-4px);
+    transition: transform 34ms;
+}
+
+button:hover .shadowspin {
+    transform: translateY(6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadowspin {
+    transform: translateY(2px);
+    transition: transform 34ms;
+}
+
+
+/*BackButton*/
 #BackBtn {
     position: relative;
     margin-top: 2.25%;
@@ -606,7 +657,7 @@ button:focus:not(:focus-visible) {
     display: block;
     transform: translate(-50%,-50%);
     top: 5%;
-    left: 5%;
+    left: 8%;
     width: 60vh;
     height: 60vh;
     border:1px solid;
