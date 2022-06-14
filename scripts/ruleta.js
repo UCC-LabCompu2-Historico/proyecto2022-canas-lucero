@@ -97,6 +97,10 @@ let mouse = {
     x: null, y: null,
 };
 
+/**
+ * Se encarga de señalizar que está seleccionada la ficha azul aplicándole a la misma un contorno blanco
+ */
+
 Fichas.Azul.addEventListener("click", function () {
     FS = 1;
     Fichas.Azul.style.border = "10px solid white";
@@ -104,6 +108,11 @@ Fichas.Azul.addEventListener("click", function () {
     Fichas.Verde.style.border = "none";
     Fichas.Negra.style.border = "none";
 });
+
+/**
+ * Se encarga de señalizar que está seleccionada la ficha roja aplicándole a la misma un contorno blanco
+ */
+
 Fichas.Roja.addEventListener("click", function () {
     FS = 2;
     Fichas.Azul.style.border = "none";
@@ -111,6 +120,11 @@ Fichas.Roja.addEventListener("click", function () {
     Fichas.Verde.style.border = "none";
     Fichas.Negra.style.border = "none";
 });
+
+/**
+ * Se encarga de señalizar que está seleccionada la ficha verde aplicándole a la misma un contorno blanco
+ */
+
 Fichas.Verde.addEventListener("click", function () {
     FS = 3;
     Fichas.Azul.style.border = "none";
@@ -118,6 +132,11 @@ Fichas.Verde.addEventListener("click", function () {
     Fichas.Verde.style.border = "10px solid white";
     Fichas.Negra.style.border = "none";
 });
+
+/**
+ * Se encarga de señalizar que está seleccionada la ficha negra aplicándole a la misma un contorno blanco
+ */
+
 Fichas.Negra.addEventListener("click", function () {
     FS = 4;
     Fichas.Azul.style.border = "none";
@@ -126,6 +145,9 @@ Fichas.Negra.addEventListener("click", function () {
     Fichas.Negra.style.border = "10px solid white";
 });
 
+/**
+ * Una vez ocurre un clíck sobre el canvas este se encarga de triangular la posición de mouse y a través de condicionales idenficar el casillero donde se está realizando el clíck para posteriormente colocar una ficha en esa posición según corresponda
+ */
 document.getElementById("canvas_divs_container").addEventListener('click', function (event) {
 
     const interactivecanvas = document.getElementById('tablero_fichas')
@@ -3188,6 +3210,3 @@ function ProfileCardDataLoading() {
     BalanceLabel.innerHTML = "$" + Balance + "⁰⁰";
     UsernameLabel.innerHTML = Username;
 }
-
-
-/* RULETA */
