@@ -5362,6 +5362,463 @@ window.onbeforeunload = function () {
 };
 
 /**
+ * Se encarga de generar un numero aleatorio
+ * @method getRandomIntInclusive()
+ */
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+/**
+ * Se encarga del funcionamiento de la ruleta y calculos en segundo plano requeridos para el mismo
+ * @method Spin()
+ */
+
+function Spin() {
+    let N = getRandomIntInclusive(1, 36);
+    let A1;
+
+    switch (N) {
+        case 1:
+            A1 = AmountDivs.AT1.innerHTML * 36;
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 2:
+            A1 = AmountDivs.AT2.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 3:
+            A1 = AmountDivs.AT3.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 4:
+            A1 = AmountDivs.AT4.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 5:
+            A1 = AmountDivs.AT5.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 6:
+            A1 = AmountDivs.AT6.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 7:
+            A1 = AmountDivs.AT7.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 8:
+            A1 = AmountDivs.AT8.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 9:
+            A1 = AmountDivs.AT9.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 10:
+            A1 = AmountDivs.AT10.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 11:
+            A1 = AmountDivs.AT11.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 12:
+            A1 = AmountDivs.AT12.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 13:
+            A1 = AmountDivs.AT13.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 14:
+            A1 = AmountDivs.AT14.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 15:
+            A1 = AmountDivs.AT15.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 16:
+            A1 = AmountDivs.AT16.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 17:
+            A1 = AmountDivs.AT17.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 18:
+            A1 = AmountDivs.AT18.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 19:
+            A1 = AmountDivs.AT19.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 20:
+            A1 = AmountDivs.AT20.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 21:
+            A1 = AmountDivs.AT21.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 22:
+            A1 = AmountDivs.AT22.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 23:
+            A1 = AmountDivs.AT23.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 24:
+            A1 = AmountDivs.AT24.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 25:
+            A1 = AmountDivs.AT25.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 26:
+            A1 = AmountDivs.AT26.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 27:
+            A1 = AmountDivs.AT27.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 28:
+            A1 = AmountDivs.AT28.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 29:
+            A1 = AmountDivs.AT29.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 30:
+            A1 = AmountDivs.AT30.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 31:
+            A1 = AmountDivs.AT31.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 32:
+            A1 = AmountDivs.AT32.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 33:
+            A1 = AmountDivs.AT33.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 34:
+            A1 = AmountDivs.AT34.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 35:
+            A1 = AmountDivs.AT35.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+        case 36:
+            A1 = AmountDivs.AT36.innerHTML * 36;
+
+            if (A1 !== 0) {
+                Balance += A1;
+                ClearSpin();
+                alert("El numero es: " + N + " Felicidades! Ganaste $" + A1 + "!");
+            } else {
+                ClearSpin();
+                alert("El numero es: " + N + " Lo sentimos, no ganaste nada. Suerte la proxima.");
+            }
+            break;
+    }
+
+
+}
+
+/**
  * Se encarga de borrar las fichas puestas en el tablero
  * @method ClearFichas()
  */
@@ -5459,6 +5916,99 @@ function ClearFichas() {
 
     ProfileCardDataLoading();
 
+}
+
+/**
+ * Clear con configuraciones para el Spin
+ * @method ClearSpin()
+ */
+
+function ClearSpin() {
+    const canvas_fichas = document.getElementById('tablero_fichas');
+    const Ctx = canvas_fichas.getContext('2d');
+
+    Ctx.clearRect(0, 0, canvas_fichas.width, canvas_fichas.height);
+    FS = 0;
+
+    Fichas.Azul.style.border = "none";
+    Fichas.Roja.style.border = "none";
+    Fichas.Verde.style.border = "none";
+    Fichas.Negra.style.border = "none";
+
+    TableroPosCounter.T1 = 0;
+    TableroPosCounter.T2 = 0;
+    TableroPosCounter.T3 = 0;
+    TableroPosCounter.T4 = 0;
+    TableroPosCounter.T5 = 0;
+    TableroPosCounter.T6 = 0;
+    TableroPosCounter.T7 = 0;
+    TableroPosCounter.T8 = 0;
+    TableroPosCounter.T9 = 0;
+    TableroPosCounter.T10 = 0;
+    TableroPosCounter.T11 = 0;
+    TableroPosCounter.T12 = 0;
+    TableroPosCounter.T13 = 0;
+    TableroPosCounter.T14 = 0;
+    TableroPosCounter.T15 = 0;
+    TableroPosCounter.T16 = 0;
+    TableroPosCounter.T17 = 0;
+    TableroPosCounter.T18 = 0;
+    TableroPosCounter.T19 = 0;
+    TableroPosCounter.T20 = 0;
+    TableroPosCounter.T21 = 0;
+    TableroPosCounter.T22 = 0;
+    TableroPosCounter.T23 = 0;
+    TableroPosCounter.T24 = 0;
+    TableroPosCounter.T25 = 0;
+    TableroPosCounter.T26 = 0;
+    TableroPosCounter.T27 = 0;
+    TableroPosCounter.T28 = 0;
+    TableroPosCounter.T29 = 0;
+    TableroPosCounter.T30 = 0;
+    TableroPosCounter.T31 = 0;
+    TableroPosCounter.T32 = 0;
+    TableroPosCounter.T33 = 0;
+    TableroPosCounter.T34 = 0;
+    TableroPosCounter.T35 = 0;
+    TableroPosCounter.T36 = 0;
+    AmountDivs.AT1.innerHTML = "";
+    AmountDivs.AT2.innerHTML = "";
+    AmountDivs.AT3.innerHTML = "";
+    AmountDivs.AT4.innerHTML = "";
+    AmountDivs.AT5.innerHTML = "";
+    AmountDivs.AT6.innerHTML = "";
+    AmountDivs.AT7.innerHTML = "";
+    AmountDivs.AT8.innerHTML = "";
+    AmountDivs.AT9.innerHTML = "";
+    AmountDivs.AT10.innerHTML = "";
+    AmountDivs.AT11.innerHTML = "";
+    AmountDivs.AT12.innerHTML = "";
+    AmountDivs.AT13.innerHTML = "";
+    AmountDivs.AT14.innerHTML = "";
+    AmountDivs.AT15.innerHTML = "";
+    AmountDivs.AT16.innerHTML = "";
+    AmountDivs.AT17.innerHTML = "";
+    AmountDivs.AT18.innerHTML = "";
+    AmountDivs.AT19.innerHTML = "";
+    AmountDivs.AT20.innerHTML = "";
+    AmountDivs.AT21.innerHTML = "";
+    AmountDivs.AT22.innerHTML = "";
+    AmountDivs.AT23.innerHTML = "";
+    AmountDivs.AT24.innerHTML = "";
+    AmountDivs.AT25.innerHTML = "";
+    AmountDivs.AT26.innerHTML = "";
+    AmountDivs.AT27.innerHTML = "";
+    AmountDivs.AT28.innerHTML = "";
+    AmountDivs.AT29.innerHTML = "";
+    AmountDivs.AT30.innerHTML = "";
+    AmountDivs.AT31.innerHTML = "";
+    AmountDivs.AT32.innerHTML = "";
+    AmountDivs.AT33.innerHTML = "";
+    AmountDivs.AT34.innerHTML = "";
+    AmountDivs.AT35.innerHTML = "";
+    AmountDivs.AT36.innerHTML = "";
+
+    ProfileCardDataLoading();
 }
 
 /**
