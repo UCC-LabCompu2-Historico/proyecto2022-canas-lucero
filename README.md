@@ -1,6 +1,6 @@
 # **CASINO DIGITAL - "*Lotus Casino*"**
 
-[Link GitHub Pages](https://ucc-labcompu2.github.io/proyecto2022-canas-lucero/)
+[Link GitHub Pages](https://ucc-labcompu2-Historico.github.io/proyecto2022-canas-lucero/)
 
 ### **Autores:**
 
